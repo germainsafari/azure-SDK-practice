@@ -12,5 +12,5 @@ y_train = ["yes", "no", "no","yes","yes","yes","yes","yes", "no"]
 
 clf = svm.SVC(gamma=0.001, C=100)
 clf.fit(x_train, y_train)
-
+print(clf)
 joblib.dump(value=clf, filename="churn.pkl")

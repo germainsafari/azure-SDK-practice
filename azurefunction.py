@@ -9,7 +9,7 @@ container_client = blob_service_client.get_container_client(container_name)
 
 blob_name = "my-blob.txt"
 
-blob_client = container_client.get_blob_client(blob_client)
+blob_client = container_client.get_blob_client(blob_name)
 
 data = b"hello, azure blob storage"
 

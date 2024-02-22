@@ -14,6 +14,16 @@ a tensor has the following main properties
 - rank: the number of dimensions
 - shape: the size of each dimension
 
+Models and layers are important building blocks in ML.
+a tensorflow model is a neural network with one or more layers
+ 
+A tensorflow object
+- collecting data
+- creating a model
+- adding layers to the model
+- compiling the model
+- training the model
+- using the model
 
 
 '''

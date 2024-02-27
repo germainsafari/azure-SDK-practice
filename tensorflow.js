@@ -14,4 +14,21 @@ const model = tf.sequential();
 model.add(tf.layers.dense({units:1, inputShape:[1]}));
 
 //specify loss and optimizer
-model.compile({loss:'meansquarterror'})
+model.compile({loss:'meansquarterror', optimiser:'sgd'});
+
+//train the model
+model.fit(xs, ys, {epochs:500}).then(() => {myFunction});
+
+//use the model
+function myFunction() {
+    const xArr = [];
+    const yArr = [];
+    for (let x = 0, x <= 10, x++) {
+        xArr.push(x);
+        let result = model.predict(tf.tensor([Number(x)]));
+        result.data().then(y => {
+            yArr.push(Number(y));
+            if (x == 10) {parseFloat(xArr, yArr)};
+        });
+    }
+}
